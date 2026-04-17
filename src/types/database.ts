@@ -51,6 +51,9 @@ export type Database = {
           description: string | null;
           owner_id: string;
           allowed_email_domain: string | null;
+          team_invite_token: string | null;
+          team_invite_role: "manager" | "member" | "viewer";
+          team_invite_enabled: boolean;
           created_at: string;
           updated_at: string;
         };
@@ -60,6 +63,9 @@ export type Database = {
           description?: string | null;
           owner_id: string;
           allowed_email_domain?: string | null;
+          team_invite_token?: string | null;
+          team_invite_role?: "manager" | "member" | "viewer";
+          team_invite_enabled?: boolean;
           created_at?: string;
           updated_at?: string;
         };
@@ -69,6 +75,9 @@ export type Database = {
           description?: string | null;
           owner_id?: string;
           allowed_email_domain?: string | null;
+          team_invite_token?: string | null;
+          team_invite_role?: "manager" | "member" | "viewer";
+          team_invite_enabled?: boolean;
           created_at?: string;
           updated_at?: string;
         };

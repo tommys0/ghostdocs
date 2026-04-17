@@ -1,4 +1,4 @@
-export type Role = "owner" | "manager" | "member";
+export type Role = "owner" | "manager" | "member" | "viewer";
 
 export function canManageProject(role: Role): boolean {
   return role === "owner" || role === "manager";
@@ -28,6 +28,8 @@ export function getRoleLabel(role: Role): string {
       return "Manager";
     case "member":
       return "Engineer";
+    case "viewer":
+      return "Viewer";
     default:
       return "Member";
   }
@@ -41,6 +43,8 @@ export function getRoleDescription(role: Role): string {
       return "Can view team activity, generate reports, and manage members";
     case "member":
       return "Can view personal activity and project updates";
+    case "viewer":
+      return "Read-only access to project information";
     default:
       return "";
   }
